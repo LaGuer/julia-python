@@ -1,6 +1,6 @@
 # Julia and Python environments
 
-[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/laguer/julia-python/master/julia.ipynb)
+[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/laguer/julia-python/master)
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/laguer/julia-python/blob/master/julia.ipynb)
 
