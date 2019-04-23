@@ -1,9 +1,9 @@
 PyPlot
 PyCall
 Measurements
-Cosmology
+#Cosmology
 SpecialFunctions
 Unitful
 #PhysConsts
 #MathPhysicalConstants
-git+https://github.com/LaGuer/PhysicalConstant.jl.git#egg=PhysicalConstant[complete]
+#git+https://github.com/LaGuer/PhysicalConstant.jl.git#egg=PhysicalConstant[complete]
