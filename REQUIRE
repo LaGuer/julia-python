@@ -6,3 +6,4 @@ SpecialFunctions
 Unitful
 #PhysConsts
 #MathPhysicalConstants
+git+https://github.com/LaGuer/PhysicalConstant.jl.git#egg=PhysicalConstant[complete]
