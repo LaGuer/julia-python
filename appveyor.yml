@@ -33,17 +33,31 @@ build_script:
   - C:\julia\bin\julia -e "%JL_BUILD_SCRIPT%"
   #- C:\julia\bin\julia -e "using Pkg; Pkg.build(Measurements)"
   - C:\julia\bin\julia -e "using InteractiveUtils; versioninfo();
-    using UUIDs;
-    before = read(\"Project.toml\", String);
-    after = replace(before, \"uuid = \\\"44cfe95a-1eb2-52ea-b672-e2afdf69b78f\\\"\" =>
-                            \"uuid = \\\"4d836010-47a6-11e8-12b2-0918962bae33\\\"\");
-    write(\"Project.toml\", after);
-    import Pkg; Pkg.build()"
+  - C:\julia\bin\julia -e "import Pkg; Pkg.build()"
+  - C:\julia\bin\julia -e "import Pkg; Pkg.status()"
 
 test_script:
   - echo "%JL_TEST_SCRIPT%"
   - C:\julia\bin\julia -e "%JL_TEST_SCRIPT%"
+#  - C:\julia\bin\julia -e "import Pkg; Pkg.BinaryProvider.probe_platform_engines!(;verbose=true)"
+#  - C:\julia\bin\julia -e "cmd = Pkg.BinaryProvider.gen_download_cmd("https:////github.com/LaGuer/PhysicalConstant.jl/archive/v0.0.3.tar.gz", "PhysicalConstant.tar.gz")"
+#  - C:\julia\bin\julia -e "unpack = Pkg.BinaryProvider.gen_unpack_cmd("PhysicalConstant.tar.gz", "PhysicalConstant")"
+#  - C:\julia\bin\julia -e "import Pkg; Pkg.clone(\`"https://github.com/LaGuer/PhysicalConstant.jl.git\`")"
+#  - C:\julia\bin\julia -e "mkdir("PhysicalConstant")"
+#  - C:\julia\bin\julia -e "run(unpack)"
+  - C:\julia\bin\julia -e "using InteractiveUtils; versioninfo();
+#    using UUIDs;
+#    before = read(\"Project.toml\", String);
+#    after = replace(before, \"uuid = \\\"44cfe95a-1eb2-52ea-b672-e2afdf69b78f\\\"\" =>
+#                            \"uuid = \\\"4d836010-47a6-11e8-12b2-0918962bae33\\\"\");
+#    write(\"Project.toml\", before);
+#  - C:\julia\bin\julia -e "import Pkg; Pkg.update("PhysicalConstant")"
+#  - C:\julia\bin\julia -e "using PhysicalConstant.CODATA2019; CODATA2019.c_0"
 
+
+test_script:
+  - echo "%JL_TEST_SCRIPT%"
+  - C:\julia\bin\julia -e "%JL_TEST_SCRIPT%"
 # # Uncomment to support code coverage upload. Should only be enabled for packages
 # # which would have coverage gaps without running on Windows
 # on_success:
