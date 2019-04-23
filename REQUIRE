@@ -1,9 +1,11 @@
+julia 0.7
+#Measurements 2.0.0
+Measurements 1.0.2
+Unitful 0.15.0
 PyPlot
 PyCall
-Measurements
 #Cosmology
 SpecialFunctions
-Unitful
 #PhysConsts
 #MathPhysicalConstants
 #git+https://github.com/LaGuer/PhysicalConstant.jl.git#egg=PhysicalConstant[complete]
